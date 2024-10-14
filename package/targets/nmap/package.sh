@@ -56,10 +56,4 @@ cp "${output}/${TARBALL}" /packaged
 echo "PACKAGED_TARBALL=${TARBALL}" >> $GITHUB_OUTPUT
 echo "PACKAGED_TARBALL_PATH=/packaged/${TARBALL}"  >> $GITHUB_OUTPUT
 
-ZIP="nmap-${version}-${arch}-portable.zip"
-zip -r -q "${output}/${ZIP}" .
-cp "${output}/${ZIP}" /packaged
-echo "PACKAGED_ZIP=${ZIP}" >> $GITHUB_OUTPUT
-echo "PACKAGED_ZIP_PATH=/packaged/${ZIP}" >> $GITHUB_OUTPUT
-
 echo "PACKAGED_VERSION=${version}" >> $GITHUB_OUTPUT
