@@ -26,12 +26,6 @@ jobs:
               name: ${{ steps.package_nmap.outputs.PACKAGED_TARBALL }}
               path: ${{ steps.package_nmap.outputs.PACKAGED_TARBALL_PATH }}
 
-        - name: Upload zip
-          uses: actions/upload-artifact@v3
-          with:
-              name: ${{ steps.package_nmap.outputs.PACKAGED_ZIP }}
-              path: ${{ steps.package_nmap.outputs.PACKAGED_ZIP_PATH }}
-
     build-aarch64:
       name: Build Nmap AARCH64
       runs-on: ubuntu-latest
@@ -55,12 +49,6 @@ jobs:
           with:
               name: ${{ steps.package_nmap.outputs.PACKAGED_TARBALL }}
               path: ${{ steps.package_nmap.outputs.PACKAGED_TARBALL_PATH }}
-
-        - name: Upload zip
-          uses: actions/upload-artifact@v3
-          with:
-              name: ${{ steps.package_nmap.outputs.PACKAGED_ZIP }}
-              path: ${{ steps.package_nmap.outputs.PACKAGED_ZIP_PATH }}
 
     create-release:
       name: Create Nmap Release
